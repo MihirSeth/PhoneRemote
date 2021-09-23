@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/static/static.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PhoneRemote</title>
+</head>
+
+<body>
+    <!-- <script type=text/javascript> $(function() { $("#increaseSound").click(function (event) { $.getJSON("/increaseSound", { },
+        function(data) { }); return false; }); }); </script>
+    <script type=text/javascript> $(function() { $("#decreaseSound").click(function (event) { $.getJSON('/decreaseSound', { },
+    function(data) { }); return false; }); }); </script>
+    <script type=text/javascript> $(function() { $("#muteSound").click(function (event) { $.getJSON('/muteSound', { },
+    function(data) { }); return false; }); }); </script>
+
+    <script type=text/javascript> $(function() { $("#moveFoward").click(function (event) { $.getJSON('/moveFoward', { },
+    function(data) { }); return false; }); }); </script>
+    <script type=text/javascript> $(function() { $("#moveBack").click(function (event) { $.getJSON('/moveBack', { },
+    function(data) { }); return false; }); }); </script>
+
+    <script type=text/javascript> $(function() { $("#playpause").click(function (event) { $.getJSON('/playpause', { },
+    function(data) { }); return false; }); }); </script>
+
+    <script type=text/javascript> $(function() { $("#closewindow").click(function (event) { $.getJSON('/closewindow', { },
+    function(data) { }); return false; }); }); </script> -->
+
+    <h1 class="heading">
+        Phone Remote
+    </h1>
+    <p class="heading">Control your movies using your phone!</p>
+
+    <div class="container">
+        <div class='row'>
+            <a class='buttonheading1'>Volume Control:</a>
+
+            
+            <div class="buttoncontainer1">
+            <form action="/increaseSound" method="POST">
+                <button class="buttons" id='increaseSound' value='increaseSound' ><i class="fa fa-arrow-up"></i></button>
+            </form>
+            <form action="/decreaseSound" method="POST">
+                <button class="buttons" id='decreaseSound' value='decreaseSound'><i class="fa fa-arrow-down"></i></button>
+            </form>
+            <form action="/muteSound" method="POST">
+                <button class="buttons" id='muteSound' value='decreaseSound'><i class="fa fa-volume-off"></i></button>
+            </form>
+            </div> 
+        
+
+        </div>
+
+        <div class='row'>
+            <a class='buttonheading2'>Fast Foward/Go Back:</a>
+
+                <div class="buttoncontainer2">
+            <form action="/moveFoward" method="POST">
+                <button class="buttons" id='moveFoward' value='moveFoward'><i class="fa fa-arrow-right"></i></button>
+            </form>
+            <form action="/moveBack" method="POST">
+                <button class="buttons" id='moveBack' value='moveBack'><i class="fa fa-arrow-left"></i></button>
+            </form>
+            </div> 
+        
+        
+        </div>
+
+        <div class='row'>
+        <form action="/playpause" method="POST">
+
+            <button class='playpausebutton' id='playpause' value='playpause'>Play/Pause</button>
+        </form>
+        </div>
+
+        <div class='row'>
+        <form action="/cmndQbutton" method="POST">
+
+            <button class='cmndQbutton' id='closewindow' value='closewindow'>Control/Command+Q</button>
+        </form>
+        </div>
+
+    </div>
+</body>
+</html>
