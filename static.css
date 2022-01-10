@@ -1,0 +1,122 @@
+.headingContainer{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    /* border: 2px solid white; */
+
+}
+
+.heading {
+    font-family: Helvetica, sans-serif;
+    padding-left: 20px;
+    color: #ECDBBA;
+}
+
+
+.container{
+    height: 100px;
+    /* border: 2px solid white; */
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    /* flex-wrap: wrap; */
+    flex-direction: row;
+    gap: 2%;
+
+}
+
+body {background-color: #2D4263;}
+
+.buttons{
+    background-color: #C84B31;
+    border: none;
+    color: white;
+    padding: 18px 22px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-bottom: 5px;
+
+}
+
+.buttonheadingContainer{
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+.buttonheading{
+    font-family: Helvetica, sans-serif;
+    /* margin-left: 20%; */
+    font-weight: bold;
+    font-size: 20px;
+    color: #ECDBBA;
+}
+
+
+
+.buttons:hover {
+    background-color: #393e46;
+  }
+
+
+
+.playpausebutton{
+    background-color: royalblue;
+    border: none;
+    color: white;
+    /* margin-left: 8%;  */
+    /* margin-top: 2%;  */
+    padding: 20px 40px;
+    /* padding-left: 600px;
+    padding-right: 600px; */
+    width: 100%;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.playpausebutton:hover {
+    background-color: dodgerblue;
+  }
+
+.cmndQbutton{
+    background-color: red;
+    border: none;
+    color: white;
+    /* margin-left: 8%; */
+    padding: 20px 40px;
+    /* padding-left: 600px;
+    padding-right: 600px; */
+    width: 100%;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bolder;
+
+
+}
+
+.cmndQbutton:hover {
+    background-color: maroon;
+  }
+
+
+.finalButtonContainer{
+    /* border: 2px solid white; */
+
+    height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column;
+    gap: 5%;
+}

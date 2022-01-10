@@ -5,13 +5,12 @@ import logging
 import socket
 import random
 
-
 app = Flask(__name__)
 log = logging.getLogger('werkzeug')
-log.setLevel(logging.ERROR)
+# log.setLevel(logging.ERROR)
 pyautogui.FAILSAFE = False
 
-NAME = socket.gethostname()
+name = socket.gethostname()
 REFERENCE = random.randint(1111,9999)
 def get_ip():
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -24,8 +23,8 @@ def get_ip():
 @app.route("/")
 def home():
     ip = get_ip()
-    return render_template('index.html', ip=ip, reference=REFERENCE)
-
+    return render_template('index.html')
+# , ip=ip, reference=REFERENCE
 @app.route("/increaseSound", methods=['GET', 'POST'])
 @app.route("/decreaseSound", methods=['GET', 'POST'])
 @app.route("/muteSound", methods=['GET', 'POST'])
@@ -36,7 +35,7 @@ def changeSound():
     elif 'decrease' in command:
         pyautogui.press("down")
     elif 'mute' in command:
-        pyautogui.press("volumemute")
+        pyautogui.press("m")
     return render_template('index.html')
 
 @app.route( "/moveFoward", methods=['GET', 'POST'])
@@ -45,7 +44,7 @@ def seek():
     command = request.path
     if 'Foward' in command:
         pyautogui.press("left")
-    if 'Back' in command:
+    elif 'Back' in command:
         pyautogui.press("right")
 
     return render_template('index.html')
@@ -67,11 +66,11 @@ def playpause():
 
 if __name__ == '__main__':
     
-
     host = get_ip()+':5000/'
-    print('Access at ' + host)
+    # print('Access at ' + host)
+    
 
     img = qrcode.make(host)
-    # img.show()
-    app.run(debug=True, host="0.0.0.0")
+    img.show()
+    app.run(debug=True,host="0.0.0.0")
 
